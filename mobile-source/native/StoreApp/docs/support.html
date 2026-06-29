@@ -5,47 +5,174 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Support — Aadhaar FastScan</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; max-width: 720px; margin: 0 auto; padding: 24px; color: #1a1a1a; }
-    h1 { font-size: 1.75rem; }
-    h2 { font-size: 1.15rem; margin-top: 2rem; }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.7;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+      color: #1a1a1a;
+      background: #fff;
+    }
+    h1 { font-size: 1.9rem; margin-bottom: 4px; }
+    h2 { font-size: 1.1rem; margin-top: 2.2rem; margin-bottom: 8px; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; }
+    h3 { font-size: 0.97rem; margin: 1.2rem 0 4px; color: #111827; }
+    p, li { font-size: 0.97rem; color: #374151; }
+    ol, ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    .meta { color: #6b7280; font-size: 0.9rem; margin-bottom: 2rem; }
+    .contact-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin: 16px 0 28px;
+    }
+    .contact-box p { margin: 4px 0; }
+    .faq-item {
+      background: #f9fafb;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 12px;
+      border: 1px solid #e5e7eb;
+    }
+    .faq-item strong { display: block; margin-bottom: 6px; color: #111827; }
+    .faq-item p { margin: 0; }
+    code {
+      background: #f3f4f6;
+      padding: 2px 7px;
+      border-radius: 5px;
+      font-family: ui-monospace, monospace;
+      font-size: 0.88em;
+    }
+    .step-list { counter-reset: steps; list-style: none; padding: 0; }
+    .step-list li {
+      counter-increment: steps;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+    .step-list li::before {
+      content: counter(steps);
+      min-width: 28px;
+      height: 28px;
+      background: #2563eb;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.82rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
     a { color: #2563eb; }
-    code { background: #f3f4f6; padding: 2px 6px; border-radius: 4px; }
+    footer { margin-top: 48px; font-size: 0.85rem; color: #9ca3af; border-top: 1px solid #e5e7eb; padding-top: 16px; }
   </style>
 </head>
 <body>
+
   <h1>Aadhaar FastScan — Support</h1>
+  <p class="meta">Version 1.0 · Developed by Techlimo</p>
 
-  <p>Aadhaar FastScan helps you scan and view information from the QR code on your Aadhaar card. All scanning is done offline on your device.</p>
+  <p>Aadhaar FastScan instantly decodes the QR code on any Aadhaar card and displays the embedded information on your device — no internet connection required, no data stored or shared.</p>
 
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:techlimo102@gmail.com">techlimo102@gmail.com</a></p>
-  <p>We aim to respond within 2–3 business days.</p>
+  <h2>Contact Us</h2>
+  <div class="contact-box">
+    <p><strong>Email:</strong> <a href="mailto:techlimo102@gmail.com">techlimo102@gmail.com</a></p>
+    <p><strong>Response time:</strong> We aim to reply within 2–3 business days.</p>
+    <p><strong>When writing to us</strong>, please include your device model, OS version, and a brief description of the issue.</p>
+  </div>
 
   <h2>How to Use</h2>
-  <ol>
+
+  <h3>Scan with Camera</h3>
+  <ol class="step-list">
     <li>Open the app and tap <strong>Scan QR Code</strong>.</li>
     <li>Allow camera access when prompted.</li>
-    <li>Align the QR code on your Aadhaar card within the frame.</li>
-    <li>Hold steady until the code is detected.</li>
+    <li>Hold your phone steady and align the Aadhaar QR code within the frame.</li>
+    <li>The code is detected automatically — no need to tap a button.</li>
+    <li>Your decoded information appears instantly on the result screen.</li>
   </ol>
-  <p>Alternatively, tap <strong>Choose from Photos</strong> to scan a QR code from a saved image.</p>
 
-  <h2>Common Issues</h2>
-  <p><strong>Camera permission denied</strong><br>
-  Go to iPhone Settings → Aadhaar FastScan → Camera → enable access.</p>
+  <h3>Scan from Gallery (saved image)</h3>
+  <ol class="step-list">
+    <li>On the home screen, tap <strong>Choose from Photos</strong>.</li>
+    <li>Select an image of an Aadhaar card from your photo library.</li>
+    <li>The app processes the image locally and displays the decoded result.</li>
+  </ol>
 
-  <p><strong>QR code not detected</strong><br>
-  Ensure good lighting, hold the phone steady, use the flash if needed, and try pinch-to-zoom. Dense Aadhaar QR codes may take a few seconds to decode.</p>
+  <h3>View or Hide the Full Aadhaar Number</h3>
+  <p>By default, only the last 4 digits of the Aadhaar number are shown (<code>XXXX XXXX 1234</code>). Tap the <strong>eye icon</strong> next to the Aadhaar number to toggle visibility.</p>
 
-  <p><strong>“Not a valid Aadhaar QR”</strong><br>
-  Make sure you are scanning the QR code printed on an official Aadhaar card (legacy XML or Secure QR format).</p>
+  <h2>Frequently Asked Questions</h2>
 
-  <p><strong>No internet required</strong><br>
-  The app works fully offline. No account or network connection is needed.</p>
+  <div class="faq-item">
+    <strong>Does the app require an internet connection?</strong>
+    <p>No. Aadhaar FastScan works entirely offline. No network connection is needed at any point.</p>
+  </div>
 
-  <h2>Disclaimer</h2>
-  <p>Aadhaar FastScan is not affiliated with UIDAI or the Government of India.</p>
+  <div class="faq-item">
+    <strong>Is my data stored or shared?</strong>
+    <p>No. Scanned information is displayed only during your session and is never saved to storage or sent to any server. See our <a href="privacy-policy.html">Privacy Policy</a> for full details.</p>
+  </div>
 
-  <p><a href="privacy-policy.html">Privacy Policy</a></p>
+  <div class="faq-item">
+    <strong>Which QR code formats are supported?</strong>
+    <p>The app supports all three official Aadhaar QR formats: the current <strong>UIDAI Secure QR</strong> (2019 and later), the older <strong>XML format</strong>, and the legacy <strong>key-value format</strong>.</p>
+  </div>
+
+  <div class="faq-item">
+    <strong>Is Aadhaar FastScan an official UIDAI app?</strong>
+    <p>No. Aadhaar FastScan is an independent utility and is not affiliated with, endorsed by, or operated by UIDAI or the Government of India.</p>
+  </div>
+
+  <h2>Troubleshooting</h2>
+
+  <div class="faq-item">
+    <strong>Camera permission denied</strong>
+    <p>
+      <strong>Android:</strong> Go to <em>Settings → Apps → Aadhaar FastScan → Permissions → Camera</em> and enable it.<br>
+      <strong>iOS:</strong> Go to <em>Settings → Aadhaar FastScan → Camera</em> and toggle it on.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <strong>QR code not detected</strong>
+    <p>Try the following:</p>
+    <ul>
+      <li>Ensure the room is well-lit or enable the torch using the flashlight button.</li>
+      <li>Hold the phone steady — motion blur prevents detection.</li>
+      <li>Move closer or use pinch-to-zoom to fill the frame with the QR code.</li>
+      <li>Avoid glare or reflections on laminated cards; try a slight angle.</li>
+      <li>Aadhaar Secure QR codes are very dense — give the camera 2–3 seconds to focus.</li>
+    </ul>
+  </div>
+
+  <div class="faq-item">
+    <strong>"Not a valid Aadhaar QR" message</strong>
+    <p>Ensure you are scanning the QR code printed on an <strong>official Aadhaar card</strong> issued by UIDAI. QR codes from other documents (PAN, Voter ID, etc.) are not supported.</p>
+  </div>
+
+  <div class="faq-item">
+    <strong>Some fields show N/A</strong>
+    <p>Not all Aadhaar cards include every field. For example, older cards may only contain the year of birth rather than a full date, or may omit certain address components. This is normal and reflects the data stored in the QR code itself.</p>
+  </div>
+
+  <div class="faq-item">
+    <strong>Gallery scan fails or shows an error</strong>
+    <p>Make sure the image is clear, not heavily compressed, and that the QR code is fully visible and not cropped. Very small or low-resolution images may fail to decode.</p>
+  </div>
+
+  <h2>Coming Soon</h2>
+  <p>We are working on a <strong>Card Verification</strong> feature that will let you compare the information visually printed on the physical card against the data encoded in the QR code — helping you quickly detect any mismatch. Stay tuned for updates.</p>
+
+  <footer>
+    <p>© 2026 Techlimo · <a href="privacy-policy.html">Privacy Policy</a> · <a href="support.html">Support</a></p>
+  </footer>
+
 </body>
 </html>

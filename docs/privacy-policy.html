@@ -5,53 +5,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — Aadhaar FastScan</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; max-width: 720px; margin: 0 auto; padding: 24px; color: #1a1a1a; }
-    h1 { font-size: 1.75rem; }
-    h2 { font-size: 1.15rem; margin-top: 2rem; }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.7;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+      color: #1a1a1a;
+      background: #fff;
+    }
+    h1 { font-size: 1.9rem; margin-bottom: 4px; }
+    h2 { font-size: 1.1rem; margin-top: 2.2rem; margin-bottom: 6px; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; }
+    p, li { font-size: 0.97rem; color: #374151; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    .meta { color: #6b7280; font-size: 0.9rem; margin-bottom: 2rem; }
+    .badge {
+      display: inline-block;
+      background: #dcfce7;
+      color: #166534;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
     a { color: #2563eb; }
-    .updated { color: #666; font-size: 0.95rem; }
+    .section-note {
+      background: #f8fafc;
+      border-left: 3px solid #2563eb;
+      padding: 10px 16px;
+      border-radius: 0 6px 6px 0;
+      margin: 12px 0;
+      font-size: 0.93rem;
+      color: #374151;
+    }
+    footer { margin-top: 48px; font-size: 0.85rem; color: #9ca3af; border-top: 1px solid #e5e7eb; padding-top: 16px; }
   </style>
 </head>
 <body>
+
   <h1>Privacy Policy</h1>
-  <p class="updated"><strong>Aadhaar FastScan</strong> · Last updated: June 24, 2025</p>
+  <p class="meta"><strong>Aadhaar FastScan</strong> · Developed by Techlimo · Last updated: June 30, 2026</p>
+  <span class="badge">✓ No data collected · 100% offline</span>
 
-  <p>This Privacy Policy describes how <strong>Aadhaar FastScan</strong> (“the App”), developed by Techlimo, handles information when you use the App on your device.</p>
+  <p>This Privacy Policy explains how <strong>Aadhaar FastScan</strong> ("the App") handles information when you use the App on your Android or iOS device. By using the App, you agree to the practices described in this policy.</p>
 
-  <h2>Summary</h2>
-  <p>The App scans QR codes printed on Aadhaar cards and displays decoded information on your device. <strong>We do not collect, store, transmit, or share your personal information.</strong> All processing happens locally on your device.</p>
+  <h2>1. Overview</h2>
+  <div class="section-note">
+    Aadhaar FastScan decodes QR codes printed on Aadhaar cards and displays the decoded information on your device only. <strong>We do not collect, store, transmit, or share any personal information.</strong> All processing is performed locally on your device.
+  </div>
 
-  <h2>Information the App Processes</h2>
-  <p>When you scan an Aadhaar QR code, the App may decode and display fields such as name, date of birth, gender, address, and a masked Aadhaar number. This information is shown only on your device during your session. The App does not persistently store this data and does not send it to any server.</p>
-
-  <h2>Information We Do Not Collect</h2>
+  <h2>2. Information the App Processes</h2>
+  <p>When you scan an Aadhaar QR code, the App may decode and temporarily display the following fields — which are already embedded inside the QR code:</p>
   <ul>
-    <li>No account registration or login is required</li>
-    <li>No data is uploaded to our servers or any third party</li>
-    <li>No analytics, advertising, or tracking SDKs are used</li>
-    <li>No internet connection is required for core app functionality</li>
+    <li>Full name</li>
+    <li>Date of birth or year of birth</li>
+    <li>Gender</li>
+    <li>Residential address (house, street, landmark, locality, district, state, pincode)</li>
+    <li>Masked Aadhaar number (only the last 4 digits are shown by default)</li>
+    <li>Care-of information (if present in the QR)</li>
+    <li>Hashed mobile or email indicator (a one-way hash — the original number is not recoverable)</li>
+  </ul>
+  <p>This information is displayed on-screen only during your active session. The App does not write this data to storage and does not transmit it anywhere.</p>
+
+  <h2>3. Data We Do Not Collect</h2>
+  <ul>
+    <li>No account registration or login is required or used</li>
+    <li>No personal data is uploaded to our servers or any third-party service</li>
+    <li>No analytics, crash-reporting, advertising, or tracking SDKs are integrated</li>
+    <li>No scan history is saved on your device</li>
+    <li>No internet connection is required or used for any core functionality</li>
   </ul>
 
-  <h2>Device Permissions</h2>
-  <p><strong>Camera:</strong> Used only to scan QR codes in real time. Camera images are processed on your device and are not saved or transmitted by the App.</p>
-  <p><strong>Photo Library:</strong> Used only when you choose to scan a QR code from a saved image. Selected images are processed locally and are not stored or transmitted by the App.</p>
+  <h2>4. Device Permissions</h2>
+  <p><strong>Camera</strong><br>
+  Used solely to scan QR codes in real time through the camera viewfinder. Camera frames are processed on-device and are never saved or transmitted by the App.</p>
 
-  <h2>Data Retention</h2>
-  <p>Scanned information exists only while you use the App. When you close the App or start a new scan, previously displayed information is not retained by the App.</p>
+  <p><strong>Photo Library / Media Storage</strong><br>
+  Used only when you explicitly choose "Scan from Gallery" to select an image already on your device. The selected image is processed locally and is not stored or transmitted by the App.</p>
 
-  <h2>Children’s Privacy</h2>
-  <p>The App is not directed at children under 13. We do not knowingly collect personal information from anyone.</p>
+  <h2>5. Data Retention</h2>
+  <p>Decoded information is held in memory only while the result screen is open. When you navigate away, close the App, or start a new scan, no previously displayed information is retained. The App does not create any persistent scan history.</p>
 
-  <h2>Third-Party Services</h2>
-  <p>The App does not integrate third-party services that collect personal data.</p>
+  <h2>6. Children's Privacy</h2>
+  <p>The App is not directed at children under the age of 13 (or the equivalent minimum age in your jurisdiction). We do not knowingly process personal information from children. If you believe a child has used the App to scan sensitive information, please contact us so we can provide guidance.</p>
 
-  <h2>Disclaimer</h2>
-  <p>Aadhaar FastScan is an independent utility app. It is not affiliated with, endorsed by, or operated by UIDAI (Unique Identification Authority of India) or the Government of India.</p>
+  <h2>7. Third-Party Services</h2>
+  <p>The App does not integrate any third-party SDKs that collect personal data, including but not limited to advertising networks, analytics platforms, or crash-reporting tools. QR code decoding is performed entirely by code running on your device.</p>
 
-  <h2>Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date.</p>
+  <h2>8. Security</h2>
+  <p>Because the App does not transmit or store personal data, the risk of a data breach from our side is minimal. Scanned information exists only in your device's volatile memory for the duration of your session.</p>
 
-  <h2>Contact</h2>
-  <p>If you have questions about this Privacy Policy, contact us at <a href="mailto:techlimo102@gmail.com">techlimo102@gmail.com</a>.</p>
+  <h2>9. Disclaimer</h2>
+  <p>Aadhaar FastScan is an independent utility application. It is not affiliated with, endorsed by, certified by, or operated by UIDAI (Unique Identification Authority of India) or the Government of India. The App is provided "as is" for informational convenience only.</p>
+
+  <h2>10. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time to reflect changes in the App or applicable law. Any changes will be posted on this page with an updated date. Continued use of the App after changes are posted constitutes acceptance of the updated policy.</p>
+
+  <h2>11. Contact Us</h2>
+  <p>If you have questions, concerns, or requests regarding this Privacy Policy, please contact:</p>
+  <p>
+    <strong>Techlimo</strong><br>
+    Email: <a href="mailto:techlimo102@gmail.com">techlimo102@gmail.com</a>
+  </p>
+  <p>We aim to respond within 2–3 business days.</p>
+
+  <footer>
+    <p>© 2026 Techlimo · <a href="support.html">Support</a> · <a href="privacy-policy.html">Privacy Policy</a></p>
+  </footer>
+
 </body>
 </html>
